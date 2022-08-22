@@ -144,7 +144,7 @@ int BMH(char *str, char *t)
             i = i+v;
         }else
         {
-            x = char_in_str(t, str[x]);
+            x = char_in_str(t, str[j]);
             if(x <0)
                 i = i+v;
             else
