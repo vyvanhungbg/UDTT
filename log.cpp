@@ -62,7 +62,20 @@ void QuyHoachDong(GH a[], int n)
     }
 }
 
-
+void TruyVet(GH a[], int n)
+{
+    int i = n-1, j= w;
+    cout << "Lay cac goi thu : ";
+    while(i!=-1)
+    {
+        if(dp[i][j] != dp[i-1][j])
+        {
+            cout<<i +1<< " ";
+            j = j-a[i].kl;
+        }
+        i--;
+    }
+}
 
 int TimMaxKL(GH a[], int left, int right)
 {
@@ -235,6 +248,18 @@ int main()
 {
     char str[] = "namsau$mothaibabonnamsau";
     char t[]  = "nam";
+
+    //
+    int n=6;
+    GH a[6] =
+    {
+        GH("GH001", 3, 3),
+        GH("GH002", 6, 5),
+        GH("GH003", 7, 9),
+        GH("GH004", 3, 5),
+        GH("GH005", 8, 8),
+        GH("GH006", 9, 1)
+    };
     //cout<<indexOf(str, t);
     cout<<BMH(str,t)<<endl;
 
